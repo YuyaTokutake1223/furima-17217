@@ -40,19 +40,19 @@
                 <mxCell id="90jA6NsGdoDW6GEbfOCI-47" value="description" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
                     <mxGeometry y="50" width="150" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="90jA6NsGdoDW6GEbfOCI-50" value="categories" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
+                <mxCell id="90jA6NsGdoDW6GEbfOCI-50" value="category_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
                     <mxGeometry y="74" width="150" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="90jA6NsGdoDW6GEbfOCI-51" value="condition" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
+                <mxCell id="90jA6NsGdoDW6GEbfOCI-51" value="condition_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
                     <mxGeometry y="98" width="150" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="90jA6NsGdoDW6GEbfOCI-52" value="shipping_cost" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;html=1;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
+                <mxCell id="90jA6NsGdoDW6GEbfOCI-52" value="shipping_cost_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;html=1;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
                     <mxGeometry y="122" width="150" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="90jA6NsGdoDW6GEbfOCI-53" value="shipping_origin_region" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
+                <mxCell id="90jA6NsGdoDW6GEbfOCI-53" value="prefecture_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
                     <mxGeometry y="146" width="150" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="90jA6NsGdoDW6GEbfOCI-54" value="shipping_duration" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=0;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
+                <mxCell id="90jA6NsGdoDW6GEbfOCI-54" value="shipping_duration_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=0;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
                     <mxGeometry y="170" width="150" height="24" as="geometry"/>
                 </mxCell>
                 <mxCell id="90jA6NsGdoDW6GEbfOCI-129" value="sales_price" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=0;fontColor=#FFFFFF;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-43">
@@ -67,7 +67,7 @@
                 <mxCell id="90jA6NsGdoDW6GEbfOCI-56" value="postal_code" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-55">
                     <mxGeometry y="26" width="140" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="90jA6NsGdoDW6GEbfOCI-62" value="prefecture" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-55">
+                <mxCell id="90jA6NsGdoDW6GEbfOCI-62" value="prefecture_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#CCFF99;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-55">
                     <mxGeometry y="50" width="140" height="24" as="geometry"/>
                 </mxCell>
                 <mxCell id="90jA6NsGdoDW6GEbfOCI-72" value="city_town_village" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="90jA6NsGdoDW6GEbfOCI-55">

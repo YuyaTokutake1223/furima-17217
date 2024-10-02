@@ -25,10 +25,10 @@
 | ------------------------- | ---------- | ----------- |
 | product_name              | string     | null: false |
 | description               | text       | null: false |
-| categories_id             | integer    | null: false |
+| category_id               | integer    | null: false |
 | condition_id              | integer    | null: false |
 | shipping_cost_id          | integer    | null: false |
-| shipping_origin_region_id | integer    | null: false |
+| prefecture_id             | integer    | null: false |
 | shipping_duration_id      | integer    | null: false |
 | sales_price               | integer    | null: false |
 | user                      | references | null: false, foreign_key: true |
@@ -41,10 +41,10 @@
 
 ## purchase_records テーブル
 
-| Column     | Type       | Options     |
-| ---------- | ---------- | ----------- |
-| product_id | references | null: true,  foreign_key: true |
-| user_id    | references | null: false, foreign_key: true |
+| Column  | Type       | Options     |
+| ------- | ---------- | ----------- |
+| product | references | null: true,  foreign_key: true |
+| user    | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -63,7 +63,7 @@
 | street_address      | string     | null: false |
 | building_name       | string     |
 | contact_number      | string     | null: false |
-| purchase_records_id | references | null: false, foreign_key: true |
+| purchase_records    | references | null: false, foreign_key: true |
 
 ### Association
 
