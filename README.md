@@ -15,15 +15,15 @@
 
 ### Association
 
-- has_many :products
+- has_many :items
 - has_many :purchase_records
 
 
-##  products テーブル
+##  items テーブル
 
 | Column                    | Type       | Options     |
 | ------------------------- | ---------- | ----------- |
-| product_name              | string     | null: false |
+| item_name                 | string     | null: false |
 | description               | text       | null: false |
 | category_id               | integer    | null: false |
 | condition_id              | integer    | null: false |
@@ -43,13 +43,13 @@
 
 | Column  | Type       | Options     |
 | ------- | ---------- | ----------- |
-| product | references | null: true,  foreign_key: true |
+| item    | references | null: true,  foreign_key: true |
 | user    | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :product
+- belongs_to :item
 - has_one    :address
 
 
