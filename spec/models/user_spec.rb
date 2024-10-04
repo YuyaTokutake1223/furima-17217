@@ -83,18 +83,28 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
 
-      it "お名前(全角)が半角では登録できない" do
+      it "お名前(全角)の苗字が半角では登録できない" do
         @user.last_name = 'tokutake'
-        @user.first_name = 'yuya'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name is invalid", "First name is invalid")
+        expect(@user.errors.full_messages).to include("Last name is invalid")
       end
 
-      it "お名前カナ(全角)が全角カタカナでなければ登録できない" do
-        @user.last_name_furigana = 'ﾄｸﾀｹ'
-        @user.first_name_furigana = 'yuya'
+      it "お名前(全角)の名前が半角では登録できない" do
+        @user.first_name = 'yuya'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name furigana is invalid", "First name furigana is invalid")
+        expect(@user.errors.full_messages).to include("First name is invalid")
+      end
+
+      it "お名前カナ(全角)の苗字が全角カタカナでなければ登録できない" do
+        @user.last_name_furigana = 'ﾄｸﾀｹ'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Last name furigana is invalid")
+      end
+
+      it "お名前カナ(全角)の名前が全角カタカナでなければ登録できない" do
+        @user.first_name_furigana = 'ﾕｳﾔ'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name furigana is invalid")
       end
     end
   end
