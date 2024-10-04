@@ -90,7 +90,7 @@ Devise.setup do |config|
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
   # Does not affect registerable.
-  config.paranoid = true
+  config.paranoid = false
 
   # By default Devise will store the user in session. You can skip storage for
   # particular strategies by setting this option.
@@ -310,4 +310,7 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  config.warden do |manager|
+    manager.failure_app = CustomFailureApp
+  end
 end
