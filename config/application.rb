@@ -18,5 +18,6 @@ module Furima17217
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
