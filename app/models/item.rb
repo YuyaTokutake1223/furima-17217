@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :shipping_duration
 
+  validates :image,                presence: true, attached: true
   validates :item_name,            presence: true
   validates :description,          presence: true
   validates :category_id,          numericality: { other_than: 1, message: "can't be blank"}
@@ -17,6 +18,7 @@ class Item < ApplicationRecord
   validates :user,                 presence: true
   
   belongs_to :user
+  has_one_attached :image
   # 下記のモデルはまだ作成していないため保留（10/05）
   # has_one    :purchase_record
 end
