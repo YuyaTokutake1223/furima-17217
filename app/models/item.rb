@@ -1,4 +1,9 @@
 class Item < ApplicationRecord
+  belongs_to :user
+  has_one_attached :image
+  # 下記のモデルはまだ作成していないため保留（10/05）
+  # has_one    :purchase_record
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
   belongs_to_active_hash :condition
@@ -6,7 +11,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :shipping_duration
 
-  validates :image,                presence: true, attached: true
+  validate  :image_presence
   validates :item_name,            presence: true
   validates :description,          presence: true
   validates :category_id,          numericality: { other_than: 1, message: "can't be blank"}
@@ -17,8 +22,10 @@ class Item < ApplicationRecord
   validates :sales_price,          presence: true, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 },  format: {with: /\A[-]?[0-9]+(\.[0-9]+)?\z/, on: :create}
   validates :user,                 presence: true
   
-  belongs_to :user
-  has_one_attached :image
-  # 下記のモデルはまだ作成していないため保留（10/05）
-  # has_one    :purchase_record
+
+  private
+
+  def image_presence
+    errors.add(:image, 'を選択してください') unless image.attached?
+  end
 end
