@@ -3,10 +3,10 @@ class CreateItems < ActiveRecord::Migration[7.0]
     create_table :items do |t|
       t.string     :item_name,            null: false, default: ""
       t.text       :description,          null: false
-      t.integer    :category_id,          null: false #AH済
-      t.integer    :condition_id,         null: false #AH済
-      t.integer    :shipping_cost_id,     null: false #AH済
-      t.integer    :prefecture_id,        null: false #AH済
+      t.integer    :category_id,          null: false 
+      t.integer    :condition_id,         null: false 
+      t.integer    :shipping_cost_id,     null: false 
+      t.integer    :prefecture_id,        null: false 
       t.integer    :shipping_duration_id, null: false
       t.integer    :sales_price,          null: false
       t.references :user,                 null: false, foreign_key: true

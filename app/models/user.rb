@@ -17,8 +17,8 @@ class User < ApplicationRecord
   validates :password,                            format: {with: PASSWORD_REGEX, on: :create}
   
 
-# 下記のモデルはまだ作成していないため保留（10/03）
-  # has_many :products
+  has_many :items
+  # 下記のモデルはまだ作成していないため保留（10/03）
   # has_many :purchase_records
   
 end
