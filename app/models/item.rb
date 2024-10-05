@@ -26,6 +26,6 @@ class Item < ApplicationRecord
   private
 
   def image_presence
-    errors.add(:image, 'を選択してください') unless image.attached?
+    errors.add(:image, "can't be blank") unless image.attached?
   end
 end
