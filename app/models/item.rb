@@ -19,10 +19,7 @@ class Item < ApplicationRecord
   validates :shipping_cost_id,     numericality: { other_than: 1, message: "can't be blank"}
   validates :prefecture_id,        numericality: { other_than: 1, message: "can't be blank"} 
   validates :shipping_duration_id, numericality: { other_than: 1, message: "can't be blank"}
-  validates :sales_price,          presence: true, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 },  format: {with: /\A[-]?[0-9]+(\.[0-9]+)?\z/, on: :create}
-  validates :user,                 presence: true
-  
-
+  validates :sales_price,          presence: true, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, only_integer:true }
   private
 
   def image_presence

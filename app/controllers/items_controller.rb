@@ -14,18 +14,18 @@ class ItemsController < ApplicationController
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
-      puts @item.errors.full_messages
     end
   end
 
-  def edit
-  end
+  # 先の段階で実装するため一旦コメントアウト（10/07）
+  # def edit
+  # end
 
-  def update
-  end
+  # def update
+  # end
 
-  def show
-  end
+  # def show
+  # end
 
 
   private
