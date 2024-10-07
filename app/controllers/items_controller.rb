@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
+  before_action :set_item, only: [:edit, :show]
 
   def index
     @items = Item.includes(:user).order("created_at DESC")
@@ -20,13 +21,12 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
-  # 先の段階で実装するため一旦コメントアウト（10/07）
-  # def edit
-  # end
+  def edit
+  end
   
+  # 先の段階で実装するため一旦コメントアウト（10/07）
   # def update
   # end
   
@@ -48,5 +48,8 @@ class ItemsController < ApplicationController
     .merge(user_id: current_user.id)
   end
 
-  
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
 end
