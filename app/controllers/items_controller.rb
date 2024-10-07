@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   # 先の段階で実装するため一旦コメントアウト（10/07）
