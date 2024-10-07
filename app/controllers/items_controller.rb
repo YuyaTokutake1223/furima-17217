@@ -19,15 +19,18 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+
   # 先の段階で実装するため一旦コメントアウト（10/07）
   # def edit
   # end
-
+  
   # def update
   # end
+  
 
-  # def show
-  # end
 
 
   private
