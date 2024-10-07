@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new]
+  before_action :authenticate_user!, only: [:create, :new, :edit, :update]
+  before_action :set_item, only: [:edit, :show, :update]
+  before_action :current_user_id_judge, only: [:edit]
 
   def index
     @items = Item.includes(:user).order("created_at DESC")
@@ -20,15 +22,19 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
-  # 先の段階で実装するため一旦コメントアウト（10/07）
-  # def edit
-  # end
+  def edit
+    
+  end
   
-  # def update
-  # end
+  def update
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
   
 
 
@@ -48,5 +54,14 @@ class ItemsController < ApplicationController
     .merge(user_id: current_user.id)
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
   
+  def current_user_id_judge
+    if current_user.id != @item.user_id
+      redirect_to action: :index
+    end
+  end
+
 end
