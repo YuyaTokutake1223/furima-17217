@@ -18,7 +18,6 @@ class User < ApplicationRecord
   
 
   has_many :items
-  # 下記のモデルはまだ作成していないため保留（10/03）
-  # has_many :orders
+  has_many :orders
   
 end
