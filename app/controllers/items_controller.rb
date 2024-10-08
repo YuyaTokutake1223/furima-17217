@@ -25,7 +25,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    
   end
   
   def update
@@ -41,8 +40,6 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
   
-
-
 
   private
 
