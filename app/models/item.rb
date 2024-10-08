@@ -2,7 +2,7 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   # 下記のモデルはまだ作成していないため保留（10/05）
-  # has_one    :purchase_record
+  # has_one    :order
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
