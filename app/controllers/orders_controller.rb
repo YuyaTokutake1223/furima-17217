@@ -6,11 +6,11 @@ class OrdersController < ApplicationController
   def new
     @order_address = OrderAddress.new
     if @item.order.present?
-      redirect_to root_path
+      redirect_to root_path and return
     end
     
     if current_user.id == @item.user_id
-      redirect_to root_path
+      redirect_to root_path and return
     end
   end
 
