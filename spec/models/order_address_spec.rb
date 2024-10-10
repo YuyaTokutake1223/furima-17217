@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe OrderAddress, type: :model do
   before do
     @user = FactoryBot.create(:user)
-    @item = FactoryBot.create(:item, user: @user)
+    @item = FactoryBot.create(:item)
     @order_address = FactoryBot.build(:order_address, user_id: @user.id, item_id: @item.id)
   end
 
@@ -36,7 +36,6 @@ RSpec.describe OrderAddress, type: :model do
       it_behaves_like '無効な場合', :token,             "Token can't be blank"
       it_behaves_like '無効な場合', :user_id,           "User can't be blank"
       it_behaves_like '無効な場合', :item_id,           "Item can't be blank"
-      it_behaves_like '無効な場合', :price,             "Price can't be blank"
 
       it "postal_code がハイフン無しだと保存できない" do
         @order_address.postal_code = '1234567'

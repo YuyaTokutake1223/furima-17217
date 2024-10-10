@@ -7,6 +7,5 @@ FactoryBot.define do
     building_name     { '東京ハイツ' }
     contact_number    { "0#{rand(0..9)}0#{rand(1_000_000..99_999_999)}" }
     token             {"tok_abcdefghijk00000000000000000"}
-    price             { Faker::Number.between(from: 300, to: 9999999) }
   end
 end
