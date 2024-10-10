@@ -3,6 +3,9 @@ class OrdersController < ApplicationController
     gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
     @item = Item.find(params[:item_id])
     @order_address = OrderAddress.new
+    if @item.order.present?
+      redirect_to root_path
+    end
   end
 
   def create
