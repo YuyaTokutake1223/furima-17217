@@ -1,12 +1,21 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :new]
+
+  
   def new
     gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
     @item = Item.find(params[:item_id])
     @order_address = OrderAddress.new
+
     if @item.order.present?
       redirect_to root_path
     end
+    
+    if current_user.id == @item.user_id
+      redirect_to root_path
+    end
   end
+
 
   def create
     @order_address = OrderAddress.new(order_params)
